@@ -13,4 +13,3 @@ export const decrement = ():CounterAction => ({
 export const resetAsyncNumber = ():CounterAction => ({
   type: RESET_ASYNC
 });
-
