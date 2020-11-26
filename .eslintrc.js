@@ -1,41 +1,43 @@
-module.exports={
-env:{
-  browser:true,
-  es6:true,
-  jest:true,
-},
-parserOptions:{
-  ecmaFeatures:{
-    jsx:true,
+module.exports = {
+  env: {
+    browser: true,
+    es6: true,
+    jest: true
   },
-  ecmaVersion:6,
-  sourceType:'module'
-},
-extends:[
-'react-app',
-'airbnb',
-'plugin:@typescript-eslint/recommended',
-'prettier/@typescript-eslint',
-],
-plugins:['react-hooks','import','jsx-ally'],
-settings:{
-  'import/parsers':{
-    '@typescript-eslint/parser':['.ts','.tsx'],
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+
+    ecmaFeatures: {
+      jsx: true
+    }
   },
-  'import/resolver':{
-    node:{
-      extensions:['.js','.jsx','.ts','.tsx'],
+  extends: [
+    'react-app',
+    'airbnb',
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint'
+  ],
+  plugins: ['react', 'react-hooks', 'import', 'jsx-a11y'],
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx']
     },
-    typescript:{}
-  }
-},
-rules:{
-  'linebreak-style':0,
-  'react/jsx-filename-extension': [
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
+      },
+      typescript: {}
+    }
+  },
+  rules: {
+    'no-use-before-define': 'off',
+    'linebreak-style': 0,
+    'react/jsx-filename-extension': [
       'error',
       {
-        extensions: ['.tsx'],
-      },
+        extensions: ['.tsx']
+      }
     ],
     'no-case-declarations': 'warn',
     'no-console': 'warn',
@@ -46,53 +48,54 @@ rules:{
     'no-unused-vars': 'off',
     'no-var': 'warn',
     'object-shorthand': 'warn',
+    'comma-dangle': ['error', 'never'],
     'padding-line-between-statements': [
       'warn',
       {
         blankLine: 'always',
         prev: '*',
-        next: 'class',
+        next: 'class'
       },
       {
         blankLine: 'always',
         prev: '*',
-        next: 'for',
+        next: 'for'
       },
       {
         blankLine: 'always',
         prev: '*',
-        next: 'function',
+        next: 'function'
       },
       {
         blankLine: 'always',
         prev: '*',
-        next: 'if',
+        next: 'if'
       },
       {
         blankLine: 'always',
         prev: '*',
-        next: 'return',
+        next: 'return'
       },
       {
         blankLine: 'always',
         prev: '*',
-        next: 'switch',
+        next: 'switch'
       },
       {
         blankLine: 'always',
         prev: '*',
-        next: 'try',
+        next: 'try'
       },
       {
         blankLine: 'always',
         prev: '*',
-        next: 'while',
+        next: 'while'
       },
       {
         blankLine: 'always',
         prev: 'block-like',
-        next: ['let', 'const'],
-      },
+        next: ['let', 'const']
+      }
     ],
     'import/extensions': [
       'error',
@@ -101,14 +104,14 @@ rules:{
         js: 'never',
         jsx: 'never',
         ts: 'never',
-        tsx: 'never',
-      },
+        tsx: 'never'
+      }
     ],
     'import/prefer-default-export': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': 'off',
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'off',
-  },
+    'react-hooks/exhaustive-deps': 'off'
+  }
 
 };
